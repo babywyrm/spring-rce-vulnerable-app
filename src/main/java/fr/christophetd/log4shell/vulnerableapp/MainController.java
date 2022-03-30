@@ -4,6 +4,7 @@ package fr.christophetd.log4shell.vulnerableapp;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.util.SerializationUtils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,8 +16,13 @@ public class MainController {
 
     @GetMapping("/")
     public String index(@RequestHeader("X-Api-Version") String apiVersion) {
+        
         logger.info("Received a request for API version " + apiVersion);
-        return "Hello, world!";
+        
+        // A payload that is capable of triggering a Java RCE on deserialization would be able to fire here.
+        Object deserialized = (Object) SerializationUtils.deserialize(SerializationUtils.serialize(apiVersion));
+
+        return "Hello, " + deserialized;
     }
 
 }
