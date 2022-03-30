@@ -23,6 +23,26 @@ _Currently unknown!_
 
 We'll post up a more formal guide once we determine if there is a real exploit available for this issue. To stay informed, please follow us on [Twitter](https://twitter.com/LunaSecIO) or subscribe to our [mailing list](https://www.lunasec.io/docs/blog/node-ipc-protestware/#help-us-stop-malicious-dependencies) for updates.
 
+```bash
+$ curl -v 127.0.0.1:8088/post-body --data "$(echo foobar)"                                                              
+*   Trying 127.0.0.1:8088...
+* Connected to 127.0.0.1 (127.0.0.1) port 8088 (#0)
+> POST /post-body HTTP/1.1
+> Host: 127.0.0.1:8088
+> User-Agent: curl/7.82.0
+> Accept: */*
+> Content-Length: 2
+> Content-Type: application/x-www-form-urlencoded
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< Content-Type: text/plain;charset=UTF-8
+< Content-Length: 26
+< Date: Wed, 30 Mar 2022 09:46:04 GMT
+< 
+* Connection #0 to host 127.0.0.1 left intact
+Hello, foobar 
+```
 
 ## Reference
 
