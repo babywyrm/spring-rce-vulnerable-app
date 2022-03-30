@@ -1,6 +1,8 @@
-# Log4Shell sample vulnerable application (CVE-2021-44228)
+# Spring RCE example vulnerable application
 
-This repository contains a Spring Boot web application vulnerable to CVE-2021-44228, nicknamed [Log4Shell](https://www.lunasec.io/docs/blog/log4j-zero-day/).
+This repository contains a Spring Boot web application vulnerable to CVE-2021-44228, nicknamed [Log4Shell](https://www.lunasec.io/docs/blog/log4j-zero-day/), and to a _possible_ RCE due to [this commit](https://github.com/spring-projects/spring-framework/pull/28075/files).
+
+More details will be posted in [this Twitter thread](https://twitter.com/LunaSecIO/status/1509084844042510336) as we identify them. For now though, this repo serves only to help others determine the exploitability and impact of this vulnerability.
 
 It uses Log4j 2.14.1 (through `spring-boot-starter-log4j2` 2.6.1) and the JDK 1.8.0_181.
 
