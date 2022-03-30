@@ -24,8 +24,8 @@ _Currently unknown!_
 We'll post up a more formal guide once we determine if there is a real exploit available for this issue. To stay informed, please follow us on [Twitter](https://twitter.com/LunaSecIO) or subscribe to our [mailing list](https://www.lunasec.io/docs/blog/node-ipc-protestware/#help-us-stop-malicious-dependencies) for updates.
 
 ```bash
-$ curl -v 127.0.0.1:8088/post-body --data "$(echo foobar)"                                                              
-*   Trying 127.0.0.1:8088...
+$ curl -v 127.0.0.1:8080/post-body --data "$(echo foobar)"                                                              
+*   Trying 127.0.0.1:8080...
 * Connected to 127.0.0.1 (127.0.0.1) port 8088 (#0)
 > POST /post-body HTTP/1.1
 > Host: 127.0.0.1:8088
