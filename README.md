@@ -1,8 +1,10 @@
-# DEPRECATED
+# DEPRECATED, SEE https://github.com/lunasec-io/Spring4Shell-POC
 
 This repo is not indicative of the Spring4Shell vulnerability any longer. The initial though was that the RCE was 
 achieved via a "Deserialization Injection" attack vector, but it has since been discovered to use a Struts-style
 "Class Loader Manipulation" attack vector instead.
+
+This repo is a functioning POC and vulnerable app now that have more details: https://github.com/lunasec-io/Spring4Shell-POC
 
 For more details, please see our [blog post on Spring4Shell](https://www.lunasec.io/docs/blog/spring-rce-vulnerabilities). 
 
