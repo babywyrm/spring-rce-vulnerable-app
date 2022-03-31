@@ -1,3 +1,11 @@
+# DEPRECATED
+
+This repo is not indicative of the Spring4Shell vulnerability any longer. The initial though was that the RCE was 
+achieved via a "Deserialization Injection" attack vector, but it has since been discovered to use a Struts-style
+"Class Loader Manipulation" attack vector instead.
+
+For more details, please see our [blog post on Spring4Shell](https://www.lunasec.io/docs/blog/spring-rce-vulnerabilities). 
+
 # Spring RCE example vulnerable application
 
 This repository contains a Spring Boot web application vulnerable to a _possible_ RCE due to [this commit](https://github.com/spring-projects/spring-framework/pull/28075/files).
